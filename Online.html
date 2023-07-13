@@ -294,37 +294,106 @@
     <!-- End Breadcrumb -->
     <br>
 
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; /* Adjust this value based on the aspect ratio of the embedded content */
-    }
-
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="iframe-container">
-    <iframe src="https://resultphpflp.000webhostapp.com/index.html"></iframe>
-  </div>
-</body>
-</html>
-
-
+    <br> </br>
+    
+      <style>
+        /* Some basic styling */
+        body {
+          font-family: Arial, sans-serif;
+          margin: auto;
+        }
+    
+        .form-group label {
+          font-weight: bold;
+        }
+    
+        .form-control {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+    
+        .text-right {
+          margin-top: 10px;
+        }
+    
+        .verify-btn {
+          padding: 10px 20px;
+          background-color: #ffb606;
+          color: rgb(3, 3, 3);
+        }
+    
+        #resultContainer {
+          margin-top: 20px;
+        }
+    
+        .embedResult {
+          margin-top: 20px;
+        }
+    
+        p {
+          margin-bottom: 10px;
+        }
+      </style>
+      <script>
+        function verifyStudent(event) {
+          event.preventDefault(); // Prevent form submission
+    
+          var rollNo = document.getElementById("rollNo").value;
+    
+          // Create a new XMLHttpRequest object
+          var xhr = new XMLHttpRequest();
+    
+          // Configure the request
+          xhr.open("POST", "result.php", true);
+          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+          // Define the callback function for handling the response
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              document.getElementById("resultContainer").innerHTML = xhr.responseText;
+            }
+          };
+    
+          // Send the request with the roll number as data
+          xhr.send("rollNo=" + rollNo);
+        }
+      </script>
+    </head>
+    <body>
+      <section class="ftco-section ftco-no-pt ftc-no-pb">
+        <div class="container">
+          <form id="studentForm" onsubmit="verifyStudent(event)">
+            <div class="form-group">
+              <label class="font-weight-bold">Verification Code / Roll No:</label>
+              <input type="text" id="rollNo" name="rollNo" class="form-control" value="" placeholder="Enter Your Verification Code" required />
+            </div>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary verify-btn">Verify</button>
+            </div>
+          </form>
+          <div id="resultContainer"></div>
+          <div class="embedResult" id="embedResult"></div>
+          <br>
+          <p style="font-size: 14px;">
+            <strong>DISCLAIMER:</strong> This result is issued provisionally, errors and omission excepted, as a notice only. Any entry appearing on the website does not itself confer any right or privilege on a candidate for the grant of certificate which will be issued under the rules/regulations on the basis of the original record of the Board.
+          </p>
+          <p style="font-size: 14px;">
+            <strong>Words Need to Know:</strong><br>
+            • <strong>RL:</strong> Result Late<br>
+            • <strong>RLF:</strong> Result Late Fee<br>
+            • <strong>MNI:</strong> Marks Not Improved<br>
+            • <strong>RL CC:</strong> Result Late Due to Course Completion Certificate<br>
+            • <strong>UMC:</strong> Unfair Means Case
+          </p>
+        </div>
+      </section>
+    </body>
+<br>
+</br>
+    
     
  <!-- Start Footer 
     ============================================= -->
