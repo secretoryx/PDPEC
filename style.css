@@ -1054,6 +1054,62 @@ nav.navbar.bootsnav.navbar-transparent.pad-top {
 /* ============================================================== 
      # Banner 
 =================================================================== */
+/* Responsive styles */
+.carousel-inner .item {
+  height: 400px;
+  /* Adjust the height for desktop */
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .item {
+      height: 350px;
+      /* Adjust the height for mobile */
+  }
+
+  .carousel-inner .item .content {
+      padding: 10px;
+      /* Adjust the content padding for mobile */
+  }
+
+  .carousel-inner .item .content h3 {
+      font-size: 18px;
+      /* Adjust the font size of the heading for mobile */
+  }
+
+  .carousel-inner .item .content h1 {
+      font-size: 30px;
+      /* Adjust the font size of the main title for mobile */
+  }
+
+  .carousel-inner .item .slider-thumb {
+      background-size: cover;
+      /* Adjust the background image size for mobile */
+  }
+}
+
+/* Adjust the spacing */
+.banner-area {
+  margin-bottom: 0;
+  /* Remove bottom margin */
+}
+
+.banner-area .carousel-inner {
+  margin-bottom: -20px;
+  /* Adjust negative margin to compensate for padding */
+}
+
+.banner-area .box-table {
+  padding: 30px 0;
+  /* Adjust padding as needed */
+}
+
+
+
+
+.footer-area {
+  margin-top: 0;
+  /* Remove top margin from the footer area */
+}
 body, .banner-area, 
  .banner-area div {
   height: 100%;
