@@ -1056,7 +1056,7 @@ nav.navbar.bootsnav.navbar-transparent.pad-top {
 =================================================================== */
 /* Responsive styles */
 .carousel-inner .item {
-  height: 450px;
+  height: 400px;
   /* Adjust the height for desktop */
 }
 
