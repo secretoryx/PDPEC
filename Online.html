@@ -277,14 +277,14 @@
 
     <!-- Start Breadcrumb 
     ============================================= -->
-    <div class="breadcrumb-area shadow dark text-center bg-fixed text-light" style="background-image: url(assets/img/banner/2.jpg);">
+    <div class="breadcrumb-area shadow dark text-center bg-fixed text-light" style="background-image: url(assets/img/banner/2.jpg); height: 250px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Departmental Verification</h1>
+                    <h1>Online Verification</h1>
                     <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#"><i class="fas fa-home"></i> PDPEC</a></li>
+                        <li><a href="#">Home</a></li>
                         <li class="active">Verification</li>
                     </ul>
                 </div>
@@ -337,32 +337,10 @@
           margin-bottom: 10px;
         }
       </style>
-      <script>
-        function verifyStudent(event) {
-          event.preventDefault(); // Prevent form submission
-    
-          var rollNo = document.getElementById("rollNo").value;
-    
-          // Create a new XMLHttpRequest object
-          var xhr = new XMLHttpRequest();
-    
-          // Configure the request
-          xhr.open("POST", "result.php", true);
-          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    
-          // Define the callback function for handling the response
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              document.getElementById("resultContainer").innerHTML = xhr.responseText;
-            }
-          };
-    
-          // Send the request with the roll number as data
-          xhr.send("rollNo=" + rollNo);
-        }
-      </script>
+      
     </head>
     <body>
+        <script src="script.js"></script>
       <section class="ftco-section ftco-no-pt ftc-no-pb">
         <div class="container">
           <form id="studentForm" onsubmit="verifyStudent(event)">
