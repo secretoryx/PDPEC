@@ -72,12 +72,12 @@
                                     G-9, Islamabad,Capital Territory, Pakistan
                                 </a>
                             </li>
-
+    
                             <li>
                                 <span><i class="fas fa-envelope-open"></i> Email</span>
                                 <a href="mailto:info@flp.org.pk">info@flp.org.pk</a>
                             </li>
-
+    
                             <li>
                                 <span><i class="fas fa-phone"></i> Contact</span>
                                 <a href="tel:+923456333185">+92 345-6333185</a>
@@ -85,18 +85,41 @@
                         </ul>
                     </div>
                 </div>
-                <div class="user-login text-right col-md-4">
+    
+                <!-- Google Translate Widget -->
+                <div class="col-md-2 text-right">
+                    <div id="google_translate_element"></div>
+                </div>
+    
+                <!-- "Verification" button -->
+                <div class="user-login text-right col-md-2">
                     <a href="Online.html">
                         <i class="fas fa-edit"></i> Verification
                     </a>
                 </div>
-
-                </a>
-
             </div>
         </div>
     </div>
-    </div>
+    
+    <!-- Add the following JavaScript code for the Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+    </script>
+    
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Custom CSS style block to hide the "Verification" button -->
+    <style>
+        #verification-link {
+            display: none;
+        }
+    </style>
+    
     <!-- End Header Top -->
 
     <!-- Header 
@@ -263,7 +286,10 @@
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
+                
             </div>
+
+            
 
         </nav>
         <!-- End Navigation -->
@@ -271,6 +297,8 @@
     </header>
     <!-- End Header -->
 
+
+    
 
     <!-- Start Banner 
     ============================================= -->
@@ -429,6 +457,7 @@
                                     experience of typically developing students.
                                 </a>
                             </div>
+                        
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
@@ -460,6 +489,8 @@
         </div>
     </div>
     <!-- End About -->
+
+    
 
     <style>
         .registration-section {
