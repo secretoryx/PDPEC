@@ -2201,31 +2201,66 @@ body, .banner-area,
 /* ============================================================== 
      # Start Registrar
 =================================================================== */
-        
-         /* Add your global CSS styles here */
-         .registration-section {
-          text-align: center;
-          padding: 20px;
-      }
+    /* Global styles for all screen sizes */
+.registration-section {
+  text-align: center;
+  padding: 20px;
+}
 
-      .registration-section strong {
-          font-weight: bold;
-      }
+.registration-section strong {
+  font-weight: bold;
+}
 
-      .registration-section .left-content,
-      .registration-section .right-content,
-      .registration-section .text-center {
-          padding: 20px;
-          background-color: #ffffff; /* Replace with your desired background color */
-      }
+.registration-section .left-content,
+.registration-section .right-content,
+.registration-section .registration-section-content {
+  padding: 20px;
+  background-color: #ffffff; /* Replace with your desired background color */
+}
 
-      .registration-section .text-center {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-      }
+.registration-section .text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      /* Add any other CSS styles as needed */
+/* Add any other CSS styles as needed */
+
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  .registration-section .left-content,
+  .registration-section .right-content,
+  .registration-section .registration-section-content {
+      padding: 10px; /* Reduce padding on mobile devices */
+  }
+
+  .registration-section .registration-section-content img {
+      max-width: 100%; /* Set the logo to occupy the full width of its container */
+      height: auto; /* Maintain the aspect ratio of the logo */
+  }
+}
+
+/* Center the logo on tablets and larger screens */
+@media only screen and (min-width: 768px) {
+  .registration-section .left-content,
+  .registration-section .right-content,
+  .registration-section .registration-section-content {
+      padding: 20px; /* Reset padding for tablets and larger screens */
+  }
+
+  /* Center the logo using flexbox */
+  .registration-section .registration-section-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .registration-section .registration-section-content img {
+      max-width: 200px; /* Set a specific maximum width for the logo */
+      height: auto; /* Maintain the aspect ratio of the logo */
+      margin: 0 auto; /* Center the logo horizontally */
+  }
+}
 
 /* ============================================================== 
      # End Registrar
@@ -5344,6 +5379,7 @@ body, .banner-area,
      # start css For Verification Page online.html 
 =================================================================== */
 
+
   /* Some basic styling */
   body {
     font-family: Arial, sans-serif;
@@ -5501,6 +5537,32 @@ top: calc(100% + 10px);
 opacity: 0;
 }
 }
+
+<!-- Add this CSS style to the head section of your HTML -->
+
+  .student-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .student-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .student-info p {
+    width: 49%;
+    margin-bottom: 10px;
+  }
+
+  .student-info h2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
 
 
