@@ -1648,6 +1648,7 @@ body, .banner-area,
 /* ============================================================== 
      # About Area
 =================================================================== */
+
 .about-area .our-features .item {
   -moz-box-shadow: 0 0 10px #cccccc;
   -webkit-box-shadow: 0 0 10px #cccccc;
@@ -2197,6 +2198,40 @@ body, .banner-area,
     font-weight: 600;
 }
 
+/* ============================================================== 
+     # Start Registrar
+=================================================================== */
+        
+         /* Add your global CSS styles here */
+         .registration-section {
+          text-align: center;
+          padding: 20px;
+      }
+
+      .registration-section strong {
+          font-weight: bold;
+      }
+
+      .registration-section .left-content,
+      .registration-section .right-content,
+      .registration-section .text-center {
+          padding: 20px;
+          background-color: #ffffff; /* Replace with your desired background color */
+      }
+
+      .registration-section .text-center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      /* Add any other CSS styles as needed */
+
+/* ============================================================== 
+     # End Registrar
+=================================================================== */           
+        
+
 
 /* ============================================================== 
      # Why Chose Us
@@ -2313,98 +2348,82 @@ body, .banner-area,
 
 
 /* ============================================================== 
-     # Pricing
+     # Terms & Condition 
 =================================================================== */
 
-.pricing-area .pricing-simple .pricing-item {
-  background: #ffffff none repeat scroll 0 0;
-  -moz-box-shadow: 0 0 10px #cccccc;
-  -webkit-box-shadow: 0 0 10px #cccccc;
-  -o-box-shadow: 0 0 10px #cccccc;
-  box-shadow: 0 0 10px #cccccc;
-  padding: 30px;
-  overflow: hidden;
-  position: relative;
+ /* Global styles */
+ body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-.pricing-area .equal-height {
-  margin-bottom: 30px;
+/* Section styles */
+.faq {
+  padding: 40px 0;
+  text-align: center; /* Center the content */
 }
 
-.pricing-area .pricing-item .pricing-header {
-  background: #002147 none repeat scroll 0 0;
-  margin-bottom: 20px;
-  padding: 30px 15px;
+.section-title {
+  margin-bottom: 40px;
 }
 
-.pricing-area .pricing-item.active .pricing-header {
-  background: #ffb606 none repeat scroll 0 0;
-}
-
-.pricing-area .pricing-item h4 {
-  font-weight: 600;
-  text-transform: capitalize;
-  color: #ffffff;
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.pricing-area .pricing-item h2 {
-  color: #03173d;
-  font-size: 60px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: #ffffff;
-  margin-bottom: 0;
+.faq-list ul {
+  list-style: none;
+  padding: 0;
 }
 
-.pricing-area .pricing-item h2 sub {
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0;
-  margin-left: 2px;
-  text-transform: uppercase;
+.faq-list li {
+  position: relative;
+  margin-bottom: 15px;
 }
 
-.pricing-area .pricing-item h2 sup {
-  font-weight: 500;
+.faq-list li:before {
+  content: attr(data-number);
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: #333;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.pricing-item li {
-  border-top: 1px solid #e7e7e7;
-  line-height: 45px;
-  padding: 0 30px;
-  text-transform: capitalize;
+.faq-list a {
+  cursor: pointer;
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  text-decoration: none;
 }
 
-.pricing-item li:last-child, 
-.pricing-item li:first-child, 
-.pricing-item li:nth-child(2) {
-  border: medium none;
+.faq-list a:hover {
+  color: #555;
 }
 
-.pricing-item .footer {
-  margin-top: 15px;
+.faq-list .collapse {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  display: none;
 }
 
-.pricing-simple li.pricing-header span.badge {
-  background: #ffb606 none repeat scroll 0 0;
-  border-radius: inherit;
-  font-family: "Poppins",sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 12px 0;
-  position: absolute;
-  right: -60px;
-  text-transform: uppercase;
-  top: 25px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  width: 200px;
+.faq-list .collapse.show {
+  display: block;
 }
 
+.faq-list p {
+  margin: 0;
+}
+       
 
 /* ============================================================== 
      # Search Couse 
@@ -2461,7 +2480,14 @@ body, .banner-area,
   border-radius: 30px;
 }
 
+/* ============================================================== 
+     # Registrar logo 
+=================================================================== */
 
+
+/* ============================================================== 
+     # Registrar Logo End  
+=================================================================== */
 
 
 /* ============================================================== 
@@ -2721,6 +2747,8 @@ body, .banner-area,
 .our-featues-area.inc-trending-courses .col-md-6:nth-child(2) .item {
   margin-top: 15px;
 }
+
+
 
 
 
@@ -4065,6 +4093,47 @@ body, .banner-area,
 /* ============================================================== 
      # Advisor
 =================================================================== */
+
+/* Styles for the popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+}
+
+.popup-content h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Additional styles for centering the form on mobile view */
+@media (max-width: 767px) {
+  .reg-form {
+      margin: 0 auto; /* This will center the form on mobile view */
+      max-width: 80%; /* Limit the form width on mobile for better display */
+  }
+}
 
 .advisor-area.info-default {
   padding-bottom: 35px;
