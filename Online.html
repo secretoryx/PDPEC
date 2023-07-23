@@ -24,30 +24,30 @@
 
 
 
-        <!-- ========== Start Stylesheet ========== -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="assets/css/flaticon-set.css" rel="stylesheet" />
-        <link href="assets/css/elegant-icons.css" rel="stylesheet" />
-        <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-        <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
-        <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
-        <link href="assets/css/animate.css" rel="stylesheet" />
-        <link href="assets/css/bootsnav.css" rel="stylesheet" />
-        <link href="style.css" rel="stylesheet">
-        <link href="assets/css/responsive.css" rel="stylesheet" />
-        <!-- ========== End Stylesheet ========== -->
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
       <script src="assets/js/html5/html5shiv.min.js"></script>
       <script src="assets/js/html5/respond.min.js"></script>
     <![endif]-->
 
-        <!-- ========== Google Fonts ========== -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
 
 </head>
 
@@ -277,7 +277,8 @@
 
     <!-- Start Breadcrumb 
     ============================================= -->
-    <div class="breadcrumb-area shadow dark text-center bg-fixed text-light" style="background-image: url(assets/img/banner/2.jpg); height: 250px;">
+    <div class="breadcrumb-area shadow dark text-center bg-fixed text-light"
+        style="background-image: url(assets/img/banner/2.jpg); height: 250px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -295,85 +296,134 @@
     <br>
 
     <br> </br>
-    
-      <style>
+
+    <style>
         /* Some basic styling */
         body {
-          font-family: Arial, sans-serif;
-          margin: auto;
+            font-family: Arial, sans-serif;
+            margin: auto;
         }
-    
+
         .form-group label {
-          font-weight: bold;
+            font-weight: bold;
         }
-    
+
         .form-control {
-          width: 100%;
-          padding: 8px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-    
+
         .text-right {
-          margin-top: 10px;
+            margin-top: 10px;
         }
-    
+
         .verify-btn {
-          padding: 10px 20px;
-          background-color: #ffb606;
-          color: rgb(3, 3, 3);
+            padding: 10px 20px;
+            background-color: #002147;
+            color: rgb(255, 255, 255);
         }
-    
+
         #resultContainer {
-          margin-top: 20px;
+            margin-top: 20px;
         }
-    
+
         .embedResult {
-          margin-top: 20px;
+            margin-top: 20px;
         }
-    
+
         p {
-          margin-bottom: 10px;
+            margin-bottom: 10px;
         }
-      </style>
-      
+ 
+
+        .background-image {
+            background-image: url('assets/img/banner/2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+            color: #fff;
+            /* Adjust the text color to ensure readability */
+
+        }
+    </style>
+
+    <!-- Add this CSS style to the head section of your HTML -->
+<style>
+    .student-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .student-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .student-info p {
+      width: 49%;
+      margin-bottom: 10px;
+    }
+  
+    .student-info h2 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  </style>
+  
+
     </head>
+
     <body>
         <script src="script.js"></script>
-      <section class="ftco-section ftco-no-pt ftc-no-pb">
-        <div class="container">
-          <form id="studentForm" onsubmit="verifyStudent(event)">
-            <div class="form-group">
-              <label class="font-weight-bold">Verification Code / Roll No:</label>
-              <input type="text" id="rollNo" name="rollNo" class="form-control" value="" placeholder="Enter Your Verification Code" required />
+        <section class="ftco-section ftco-no-pt ftc-no-pb">
+            <div class="container">
+                <form id="studentForm" onsubmit="verifyStudent(event)">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Verification Code / Roll No:</label>
+                        <input type="text" id="rollNo" name="rollNo" class="form-control" value=""
+                            placeholder="Enter Your Verification Code" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Father's Name:</label>
+                        <input type="text" id="fatherName" name="fatherName" class="form-control" value=""
+                            placeholder="Enter Your Father's Name" required />
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary verify-btn">Verify</button>
+                    </div>
+                </form>
+                <div id="resultContainer"></div>
+                <div class="embedResult" id="embedResult"></div>
+                <br>
+                <p style="font-size: 14px;">
+                    <strong>DISCLAIMER:</strong> This result is issued provisionally, errors and omission excepted, as a
+                    notice only. Any entry appearing on the website does not itself confer any right or privilege on a
+                    candidate for the grant of certificate which will be issued under the rules/regulations on the basis
+                    of the original record of the Board.
+                </p>
+                <p style="font-size: 14px;">
+                    <strong>Words Need to Know:</strong><br>
+                    • <strong>RL:</strong> Result Late<br>
+                    • <strong>RLF:</strong> Result Late Fee<br>
+                    • <strong>MNI:</strong> Marks Not Improved<br>
+                    • <strong>RL CC:</strong> Result Late Due to Course Completion Certificate<br>
+                    • <strong>UMC:</strong> Unfair Means Case
+                </p>
             </div>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary verify-btn">Verify</button>
-            </div>
-          </form>
-          <div id="resultContainer"></div>
-          <div class="embedResult" id="embedResult"></div>
-          <br>
-          <p style="font-size: 14px;">
-            <strong>DISCLAIMER:</strong> This result is issued provisionally, errors and omission excepted, as a notice only. Any entry appearing on the website does not itself confer any right or privilege on a candidate for the grant of certificate which will be issued under the rules/regulations on the basis of the original record of the Board.
-          </p>
-          <p style="font-size: 14px;">
-            <strong>Words Need to Know:</strong><br>
-            • <strong>RL:</strong> Result Late<br>
-            • <strong>RLF:</strong> Result Late Fee<br>
-            • <strong>MNI:</strong> Marks Not Improved<br>
-            • <strong>RL CC:</strong> Result Late Due to Course Completion Certificate<br>
-            • <strong>UMC:</strong> Unfair Means Case
-          </p>
-        </div>
-      </section>
+        </section>
     </body>
-<br>
-</br>
+    <br>
+    </br>
     
-    
- <!-- Start Footer 
+
+    <!-- Start Footer 
     ============================================= -->
     <footer class="bg-dark default-padding-top text-light">
         <div class="container">
@@ -392,14 +442,15 @@
                             </p>
                             <div class="subscribe">
                                 <form action="https://formspree.io/f/maygybgv" method="POST">
-                                  <div class="input-group stylish-input-group">
-                                    <input type="email" placeholder="Enter your e-mail here" class="form-control" name="client_email">
-                                    <button type="submit">
-                                      <i class="fa fa-paper-plane"></i>
-                                    </button>
-                                  </div>
-                               
-                              
+                                    <div class="input-group stylish-input-group">
+                                        <input type="email" placeholder="Enter your e-mail here" class="form-control"
+                                            name="client_email">
+                                        <button type="submit">
+                                            <i class="fa fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+
+
                                 </form>
                             </div>
                         </div>
@@ -483,20 +534,21 @@
                 </div>
             </div>
         </div>
-         <!-- Start Footer Bottom -->
-         <div class="footer-bottom">
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-12 text-center">
-                            <p>&copy; Copyright by <strong> Feature Learning Pakistan </strong> <a href="index.html">FLP</a></p>
+                            <p>&copy; Copyright by <strong> Feature Learning Pakistan </strong> <a
+                                    href="index.html">FLP</a></p>
                         </div>
-                        
-                            </ul>
-                        </div>
+
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <!-- End Footer Bottom -->
     </footer>
