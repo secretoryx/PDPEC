@@ -2,8 +2,10 @@ function verifyStudent(event) {
   event.preventDefault(); // Prevent form submission
 
   var rollNo = document.getElementById("rollNo").value;
+  var fatherName = document.getElementById("fatherName").value;
 
   var students = [
+    // Existing student data
     {
       rollNo: 1,
       registrationNo: '2023104',
@@ -19,25 +21,26 @@ function verifyStudent(event) {
     // Add more student data here
   ];
 
-  // Search for the student with the provided roll number
   var foundStudent = students.find(function(student) {
-    return student.rollNo == rollNo;
+    return student.rollNo == rollNo && student.fatherName === fatherName;
   });
 
-  // If a student is found, display the student details
   if (foundStudent) {
+    // Display the student's data in a beautiful card format
     document.getElementById("resultContainer").innerHTML = `
-      <h2>VERIFICATION RESULT</h2>
-      <p>It is to verify that the Diploma/Certificate issued in favor of Mr/Miss <strong>${foundStudent.name}</strong> S/D/O <strong>${foundStudent.fatherName}</strong>, vide Roll No: <strong>${foundStudent.rollNo}</strong> with Registration No: <strong>${foundStudent.registrationNo}</strong> trained and evaluated by <strong>INSTITUTE OF TECHNICAL AND PROFESSIONAL EDUCATION ISLAMABAD</strong> in the trade of <strong>${foundStudent.course}</strong> is found genuine according to our office record with the following transcript.</p>
-      <h2>TRANSCRIPT DETAILS</h2>
-      <p>Total Marks: <strong>${foundStudent.totalMarks}</strong></p>
-      <p>Marks Obtained: <strong>${foundStudent.obtainedMarks}</strong></p>
-      <p>Grade: <strong>${foundStudent.grade}</strong></p>
-      <p>Session: <strong>${foundStudent.session}</strong></p>
-      <p>Duration: <strong>${foundStudent.duration}</strong></p>
+      <div class="student-card">
+        <h2>VERIFICATION RESULT</h2>
+        <p>It is to verify that the Diploma/Certificate issued in favor of Mr/Miss <strong>${foundStudent.name}</strong> S/D/O <strong>${foundStudent.fatherName}</strong>, vide Roll No: <strong>${foundStudent.rollNo}</strong> with Registration No: <strong>${foundStudent.registrationNo}</strong> trained and evaluated by <strong>INSTITUTE OF TECHNICAL AND PROFESSIONAL EDUCATION ISLAMABAD</strong> in the trade of <strong>${foundStudent.course}</strong> is found genuine according to our office record with the following transcript.</p>
+        <h2>TRANSCRIPT DETAILS</h2>
+        <p>Total Marks: <strong>${foundStudent.totalMarks}</strong></p>
+        <p>Marks Obtained: <strong>${foundStudent.obtainedMarks}</strong></p>
+        <p>Grade: <strong>${foundStudent.grade}</strong></p>
+        <p>Session: <strong>${foundStudent.session}</strong></p>
+        <p>Duration: <strong>${foundStudent.duration}</strong></p>
+      </div>
     `;
   } else {
-    // If no student is found, display an error message
-    document.getElementById("resultContainer").textContent = "Student not found.";
+    // If no student is found or father's name doesn't match, display an error message
+    document.getElementById("resultContainer").textContent = "Student not found or father's name is incorrect.";
   }
 }
